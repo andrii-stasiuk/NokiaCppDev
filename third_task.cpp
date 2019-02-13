@@ -6,7 +6,7 @@
 #include <numeric>
 using namespace std;
 
-bool recurse(vector < int > & arr, string & result, int division, char color, int sum, int i) {
+bool recurse(vector <int> & arr, string & result, int division, char color, int sum, int i) {
   if (sum == division) {
     // We got the right sum for one color. 
     // If this was the second color, we have a solution
@@ -29,7 +29,7 @@ bool recurse(vector < int > & arr, string & result, int division, char color, in
     if (success) return true;
     result[i] = 'R'; // Set back to default color
   }
-  // No luck. Racktrack
+  // No luck. Backtrack
   return false;
 }
 
